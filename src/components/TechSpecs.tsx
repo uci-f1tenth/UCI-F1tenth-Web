@@ -1,0 +1,125 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { Cpu, Wifi, Eye, Radio } from 'lucide-react';
+
+const specs = [
+  {
+    icon: <Cpu className="w-5 h-5" />,
+    title: "NVIDIA Jetson",
+    desc: "Parallel processing for GPU-accelerated perception and real-time path planning.",
+    value: "ROS2",
+    label: "Middleware"
+  },
+  {
+    icon: <Eye className="w-5 h-5" />,
+    title: "Hokuyo LIDAR",
+    desc: "10-meter laser scanning for high-fidelity SLAM and obstacle detection.",
+    value: "10hz",
+    label: "Scan rate"
+  },
+  {
+    icon: <Radio className="w-5 h-5" />,
+    title: "VESC Drive",
+    desc: "Open-source motor controller for precision velocity and odometry feedback.",
+    value: "4S",
+    label: "LiPo power"
+  },
+  {
+    icon: <Wifi className="w-5 h-5" />,
+    title: "Link System",
+    desc: "Remote telemetry bridge for live visualization and safety override.",
+    value: "<20ms",
+    label: "Latency"
+  }
+];
+
+export default function TechSpecs() {
+  return (
+    <section id="tech" className="bg-white py-32 border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="max-w-xl">
+            <span className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.4em] mb-4 block">Hardware_Audit</span>
+            <h2 className="text-5xl font-display font-bold tracking-tight text-brand-ink mb-6">THE CORE STACK</h2>
+            <p className="text-slate-500 font-light leading-relaxed">
+              Engineered for precision. Every component in the F1TENTH ecosystem is selected for its performance-to-scale ratio, enabling true high-speed autonomy.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <div className="px-6 py-3 bg-brand-yellow/10 border border-brand-yellow/20 rounded-lg">
+              <span className="font-mono text-[10px] text-brand-ink/60 block uppercase">System_State</span>
+              <span className="font-bold text-brand-ink">OPTIMIZED</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 border border-slate-100 rounded-2xl overflow-hidden shadow-soft mb-12">
+          {specs.map((spec, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-10 flex flex-col justify-between group hover:bg-slate-50 transition-all"
+            >
+              <div className="mb-12">
+                <div className="w-10 h-10 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400 group-hover:text-brand-blue group-hover:bg-blue-50 transition-all mb-6">
+                  {spec.icon}
+                </div>
+                <h3 className="text-lg font-bold text-brand-ink mb-3">{spec.title}</h3>
+                <p className="text-sm text-slate-500 font-light leading-relaxed">
+                  {spec.desc}
+                </p>
+              </div>
+              
+              <div className="pt-6 border-t border-slate-50">
+                <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest block mb-1">{spec.label}</span>
+                <span className="text-3xl font-display font-bold text-brand-blue">{spec.value}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Physical Platform Showcase Placeholder */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative aspect-[21/9] w-full rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center group"
+        >
+          <div className="absolute inset-0 technical-grid opacity-20" />
+          
+          {/* Mock Video/Photo Background */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 to-transparent z-10" />
+          
+          <div className="relative z-20 text-center">
+            <div className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+               <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+            </div>
+            <span className="font-mono text-[10px] text-brand-yellow font-bold tracking-[0.5em] uppercase mb-4 block">Physical_Unit_Alpha</span>
+            <h3 className="text-3xl font-black italic text-white tracking-widest uppercase">The Machine_In_Motion</h3>
+          </div>
+
+          <div className="absolute top-8 left-8 z-20 flex gap-4">
+             <div className="flex flex-col">
+                <span className="font-mono text-[8px] text-white/40 uppercase">Chassis</span>
+                <span className="text-white font-bold text-xs">V1.5 CUSTOM</span>
+             </div>
+             <div className="flex flex-col">
+                <span className="font-mono text-[8px] text-white/40 uppercase">Weight</span>
+                <span className="text-white font-bold text-xs">2.4 KG</span>
+             </div>
+          </div>
+
+          <div className="absolute bottom-8 right-8 z-20">
+             <div className="flex items-center gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                <span className="font-mono text-[10px] text-white font-medium">LIVE_FEED_READY</span>
+             </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
