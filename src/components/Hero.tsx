@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import heroImage from '../images/IMG_3700.jpg';
 
 export default function Hero() {
   return (
@@ -61,7 +62,7 @@ export default function Hero() {
             <div className="relative">
               <div className="aspect-[3/4] bg-slate-50 border border-slate-100 p-3 shadow-soft relative z-10">
                 <img 
-                  src="./src/images/IMG_3700.jpg" 
+                  src={heroImage} 
                   alt="Autonomous Hardware" 
                   className="w-full h-full object-cover brightness-100"
                   referrerPolicy="no-referrer"
