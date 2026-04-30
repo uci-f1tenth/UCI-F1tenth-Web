@@ -4,25 +4,28 @@ import { Calendar, MapPin, Flag, ChevronRight } from 'lucide-react';
 
 const events = [
   {
-    date: "MAY 12, 2026",
-    title: "Regional Qualifiers",
-    location: "Main Campus Hall",
-    type: "QUALIFIER",
-    status: "OPEN"
+    date: "FRIDAY 5PM, 2026",
+    title: "General Meeting",
+    location: "DBH 1433",
+    type: "Meeting",
+    status: "WEEKLY",
+    link: "https://discord.gg/fW2hf9Xtfy"
   },
   {
-    date: "JUNE 05, 2026",
-    title: "Autonomous Sprint Cup",
-    location: "Silicon Valley Tech Center",
+    date: "WEDNESDAY 5PM",
+    title: "Research Meeting",
+    location: ";)",
+    type: "Research",
+    status: "WEEKLY",
+    link: "https://forms.gle/LefG1JNm1nLGyLeb8"
+  },
+  {
+    date: "JUNE 22, 2026",
+    title: "28th Roboracer Autonomous Racing Competition",
+    location: "Detroit, MI, USA",
     type: "RACE",
-    status: "SOON"
-  },
-  {
-    date: "AUG 20, 2026",
-    title: "International F1TENTH Grand Prix",
-    location: "Vienna, Austria",
-    type: "MAJOR",
-    status: "TBD"
+    status: "UPCOMING",
+    link: "none"
   }
 ];
 
@@ -32,12 +35,12 @@ export default function Events() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div>
-            <span className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.4em] mb-4 block">Calendar_v2</span>
-            <h2 className="text-5xl font-display font-bold tracking-tight text-brand-ink uppercase">RACE SCHEDULE</h2>
+            <span className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.4em] mb-4 block">Calendar</span>
+            <h2 className="text-5xl font-display font-bold tracking-tight text-brand-ink uppercase">Upcoming Events</h2>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">Live Updates Active</span>
+            <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">Live Updates</span>
           </div>
         </div>
         
@@ -59,8 +62,8 @@ export default function Events() {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`px-2 py-0.5 rounded text-[9px] font-bold font-mono tracking-widest ${
-                      event.status === 'OPEN' ? 'bg-green-100 text-green-600' : 
-                      event.status === 'SOON' ? 'bg-brand-yellow/20 text-brand-ink' : 'bg-slate-100 text-slate-400'
+                      event.status === 'WEEKLY' ? 'bg-green-100 text-green-600' : 
+                      event.status === 'UPCOMING' ? 'bg-brand-yellow/20 text-brand-ink' : 'bg-slate-100 text-slate-400'
                     }`}>
                       {event.status}
                     </span>
@@ -73,9 +76,16 @@ export default function Events() {
                 </div>
               </div>
               
-              <button className="flex items-center justify-center gap-2 px-8 py-4 bg-brand-ink text-white font-display font-bold text-xs rounded-full group-hover:bg-brand-blue transition-all uppercase tracking-widest">
-                Register <ChevronRight className="w-4 h-4" />
-              </button>
+              {event.link && event.link !== "none" && (
+                <a 
+                  href={event.link}
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-brand-ink text-white font-display font-bold text-xs rounded-full group-hover:bg-brand-blue transition-all uppercase tracking-widest cursor-pointer"
+                >
+                  Register <ChevronRight className="w-4 h-4" />
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

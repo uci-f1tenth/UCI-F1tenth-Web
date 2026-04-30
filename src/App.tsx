@@ -30,7 +30,6 @@ export default function App() {
           <Simulators />
         </SlantSection>
 
-        {/* AI Research Section with Persona Flair */}
         <SlantSection id="research" bgColor="bg-brand-ink" slantColor="bg-brand-yellow" className="text-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
@@ -83,11 +82,11 @@ export default function App() {
           </div>
         </SlantSection>
         
-        {/*
+        
         <SlantSection id="events" bgColor="bg-slate-50" slantColor="bg-brand-ink">
           <Events />
         </SlantSection>
-        */}
+        
 
         <SlantSection id="join" bgColor="bg-white" className="border-t border-slate-100" slantColor="bg-brand-blue">
           <div className="max-w-5xl mx-auto px-6">
@@ -110,7 +109,7 @@ export default function App() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
-                  <button onClick={() => window.open('https://discord.gg/YYNXQvkg', '_blank')} className="px-26 py-6 bg-brand-blue text-white font-bold rounded-full hover:scale-105 transition-all shadow-xl shadow-blue-500/20 uppercase tracking-widest text-sm italic">
+                  <button onClick={() => window.open('https://discord.gg/fW2hf9Xtfy', '_blank')} className="px-26 py-6 bg-brand-blue text-white font-bold rounded-full hover:scale-105 transition-all shadow-xl shadow-blue-500/20 uppercase tracking-widest text-sm italic">
                     Join Us
                   </button>
                 </div>
