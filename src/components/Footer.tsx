@@ -1,5 +1,7 @@
 import React from 'react';
 import { Zap, Github, Twitter, Youtube, Instagram, MessageSquare } from 'lucide-react';
+import logo from '../images/F1TenthUCIlogo.png';
+
 
 export default function Footer() {
   return (
@@ -8,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-8">
-              <img src="./src/images/F1TenthUCIlogo.png" alt="F1TENTH @ UCI" className="w-8 h-8" />
+              <img src={logo} alt="F1TENTH @ UCI" className="w-8 h-8" />
 
               <span className="font-display font-bold text-2xl tracking-tighter text-brand-ink">F1TENTH<span className="text-brand-blue">@UCI</span></span>
             </div>

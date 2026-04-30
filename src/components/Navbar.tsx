@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
 import { Cpu, Zap, Car } from 'lucide-react';
+import logo from '../images/F1TenthUCIlogo.png';
 
 export default function Navbar() {
   // Key update in Navbar.tsx for "Flowing" progress
@@ -43,7 +44,7 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="./src/images/F1TenthUCIlogo.png" className="w-12 h-12" />
+          <img src={logo} className="w-12 h-12" />
           <div>
             <h1 className="text-xl font-display font-bold tracking-tight leading-none">F1TENTH</h1>
             <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-400">Autonomous Racing</span>
