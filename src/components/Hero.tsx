@@ -42,14 +42,14 @@ export default function Hero() {
               UCI's premier autonomous racing collective. We engineer high-performance vehicles for the <span className="text-brand-blue font-semibold italic">F1TENTH Grand Prix</span>, pushing the boundaries of robotics at UC Irvine.
             </p>
             
-            <div className="flex flex-wrap gap-6">
+            {/*<div className="flex flex-wrap gap-6">
               <button className="px-10 py-5 bg-brand-blue text-white font-display font-bold text-sm rounded-full shadow-2xl shadow-blue-500/20 hover:scale-105 transition-all flex items-center gap-2 uppercase tracking-widest">
                 Start Racing <ArrowRight className="w-4 h-4" />
               </button>
               <button className="px-10 py-5 border border-slate-200 text-brand-ink font-display font-bold text-sm rounded-full hover:bg-slate-50 transition-all uppercase tracking-widest">
                 The Stack
               </button>
-            </div>
+            </div>*/}
           </motion.div>
           
           <motion.div
@@ -61,17 +61,17 @@ export default function Hero() {
             <div className="relative">
               <div className="aspect-[3/4] bg-slate-50 border border-slate-100 p-3 shadow-soft relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&q=80&w=1200" 
+                  src="./src/images/IMG_3700.jpg" 
                   alt="Autonomous Hardware" 
-                  className="w-full h-full object-cover grayscale brightness-110"
+                  className="w-full h-full object-cover brightness-100"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-brand-blue/5 mix-blend-overlay" />
                 
                 <div className="absolute -bottom-10 -left-10 bg-brand-yellow px-10 py-8 shadow-2xl skew-x-[-12deg]">
                   <div className="skew-x-[12deg]">
-                    <div className="font-mono text-[10px] text-brand-ink/60 uppercase tracking-widest mb-1">Race_Ready</div>
-                    <div className="text-4xl font-black italic tracking-tighter text-brand-ink">0.92s</div>
+                    <div className="font-mono text-[12px] text-brand-ink/60 uppercase tracking-widest mb-1">Built</div>
+                    <div className="text-2xl font-black italic tracking-tighter text-brand-ink">TO RACE</div>
                   </div>
                 </div>
               </div>

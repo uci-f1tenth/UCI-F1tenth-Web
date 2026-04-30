@@ -47,7 +47,7 @@ export default function TechSpecs() {
           </div>
           <div className="flex gap-4">
             <div className="px-6 py-3 bg-brand-yellow/10 border border-brand-yellow/20 rounded-lg">
-              <span className="font-mono text-[10px] text-brand-ink/60 block uppercase">System_State</span>
+              <span className="font-mono text-[10px] text-brand-ink/60 block uppercase">Hardware_State</span>
               <span className="font-bold text-brand-ink">OPTIMIZED</span>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function TechSpecs() {
           ))}
         </div>
 
-        {/* Physical Platform Showcase Placeholder */}
+        {/* Physical Platform Showcase Placeholder
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,6 @@ export default function TechSpecs() {
         >
           <div className="absolute inset-0 technical-grid opacity-20" />
           
-          {/* Mock Video/Photo Background */}
           <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 to-transparent z-10" />
           
           <div className="relative z-20 text-center">
@@ -118,7 +117,7 @@ export default function TechSpecs() {
                 <span className="font-mono text-[10px] text-white font-medium">LIVE_FEED_READY</span>
              </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

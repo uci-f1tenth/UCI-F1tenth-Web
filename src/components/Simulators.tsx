@@ -5,7 +5,7 @@ import { Box, Ghost, Layers } from 'lucide-react';
 const sims = [
   {
     icon: <Ghost className="w-6 h-6" />,
-    title: "Wartoracer",
+    title: "Warptoracer",
     desc: "Our custom high-performance simulator. Optimized for RL training throughput, this is where 90% of our research iterations happen.",
     tag: "CUSTOM_ENGINE",
     status: "PRIMARY",

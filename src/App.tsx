@@ -83,10 +83,12 @@ export default function App() {
           </div>
         </SlantSection>
         
+        {/*
         <SlantSection id="events" bgColor="bg-slate-50" slantColor="bg-brand-ink">
           <Events />
         </SlantSection>
-        
+        */}
+
         <SlantSection id="join" bgColor="bg-white" className="border-t border-slate-100" slantColor="bg-brand-blue">
           <div className="max-w-5xl mx-auto px-6">
             <motion.div
@@ -104,15 +106,12 @@ export default function App() {
                 <span className="font-mono text-[10px] text-brand-blue font-bold tracking-[0.8em] uppercase mb-12 block">Recruitment_Phase_Active</span>
                 <h2 className="text-5xl md:text-8xl font-black italic tracking-tighter text-white mb-10 leading-none">JOIN THE<br/><span className="text-stroke text-white">COLLECTIVE</span></h2>
                 <p className="text-white/50 text-xl mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                  We're engineers, designers, and dreamers. If you code for speed, you belong here. No previous robotics experience required.
+                  We're engineers, designers, and dreamers. If you code for speed, you should be one of us. (No previous robotics experience required)
                 </p>
                 
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
-                  <button className="px-16 py-6 bg-brand-blue text-white font-bold rounded-full hover:scale-105 transition-all shadow-xl shadow-blue-500/20 uppercase tracking-widest text-sm italic">
-                    Initiate Application
-                  </button>
-                  <button className="px-16 py-6 border border-white/20 text-white font-bold rounded-full hover:bg-white/5 transition-all uppercase tracking-widest text-sm italic">
-                    Contact Lead
+                  <button onClick={() => window.open('https://discord.gg/YYNXQvkg', '_blank')} className="px-26 py-6 bg-brand-blue text-white font-bold rounded-full hover:scale-105 transition-all shadow-xl shadow-blue-500/20 uppercase tracking-widest text-sm italic">
+                    Join Us
                   </button>
                 </div>
               </div>
