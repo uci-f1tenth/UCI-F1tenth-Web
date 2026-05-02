@@ -33,11 +33,11 @@ export default function Hero() {
               <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-blue font-bold">Init_Protocol://Autonomous_Racing</span>
             </div>
             
-            <h2 className="text-7xl md:text-9xl leading-[0.85] font-black tracking-tighter mb-10 text-brand-ink uppercase">
+            <h1 className="text-7xl md:text-9xl leading-[0.85] font-black tracking-tighter mb-10 text-brand-ink uppercase">
               SPEED<br/>
               <span className="text-stroke text-brand-blue">THROUGH</span><br/>
               CODE
-            </h2>
+            </h1>
             
             <p className="text-slate-500 text-xl max-w-xl font-light leading-relaxed mb-12">
               UCI's premier autonomous racing collective. We engineer high-performance vehicles for the <a href="https://roboracer.ai//" target="_blank" rel="noreferrer" className="text-brand-blue font-semibold italic">RoboRacer Competitions</a>, pushing the boundaries of racing at UC Irvine.

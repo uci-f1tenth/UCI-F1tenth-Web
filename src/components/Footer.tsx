@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.2em] mb-8">Navigation</h4>
+            <h1 className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.2em] mb-8">Navigation</h1>
             <ul className="space-y-4 text-slate-500 text-sm font-light">
               <li><a href="#" className="hover:text-brand-blue transition-colors">Lab Environment</a></li>
               <li><a href="#" className="hover:text-brand-blue transition-colors">Race Results</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.2em] mb-8">Contact Us</h4>
+            <h1 className="font-mono text-[10px] text-brand-blue uppercase tracking-[0.2em] mb-8">Contact Us</h1>
             <ul className="space-y-4 text-slate-500 text-sm font-light leading-relaxed">
               <li>f1tenth@uci.edu</li>
               <li>University of California, Irvine</li>

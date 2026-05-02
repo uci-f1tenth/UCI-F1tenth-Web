@@ -44,7 +44,7 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="F1TENTH@UCI Logo" className="w-12 h-12" />
+          <img src={logo} alt="F1TENTH@UCI Logo" width="40" height="40" className="w-12 h-12" />
           <div>
             <div className="text-xl font-display font-bold tracking-tight leading-none">F1TENTH</div>
             <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-400">Autonomous Racing</span>

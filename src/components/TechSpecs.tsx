@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Cpu, Wifi, Eye, Radio } from 'lucide-react';
 
@@ -34,6 +34,8 @@ const specs = [
 ];
 
 export default function TechSpecs() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoId = "jEkM8n8AQvY";
   return (
     <section id="tech" className="bg-white py-32 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
@@ -85,16 +87,32 @@ export default function TechSpecs() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200"
+          className="mt-20 relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200"
         >
-          <iframe 
-            className=" absolute inset-0 w-full h-full z-10"
-            src="https://www.youtube.com/embed/jEkM8n8AQvY?rel=0&modestbranding=1&color=white"
-            title="F1TENTH UCI Hardware Showcase"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-          />
+          {!videoLoaded ? (
+            <div 
+              className="absolute inset-0 w-full h-full cursor-pointer group flex items-center justify-center z-10 bg-black"
+              onClick={() => setVideoLoaded(true)}
+            >
+              <img 
+                src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`} 
+                alt="Hardware Showcase Thumbnail" 
+                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity" 
+              />
+              <div className="w-15 h-15 bg-[#fc0032] shadow-[0_0_30px_rgba(252,0,50,0.5)] rounded-full flex items-center justify-center z-20 group-hover:scale-110 transition-transform">
+                 <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+              </div>
+            </div>
+          ) : (
+            <iframe 
+              className="absolute inset-0 w-full h-full z-10"
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white`}
+              title="F1TENTH UCI Hardware Showcase"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            />
+          )}
         </motion.div>
       </div>
     </section>

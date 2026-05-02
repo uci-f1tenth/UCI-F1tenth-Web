@@ -42,7 +42,7 @@ export default function App() {
                   <div className="absolute -left-6 top-0 w-1 h-full bg-brand-yellow" />
                 </div>
                 <div className="max-w-md text-right md:text-left">
-                  <p className="text-white/40 font-mono text-[10px] uppercase tracking-widest mb-4">Research focus: End-to-end autonomous racing via reinforcement learning.</p>
+                  <p className="text-white/70 font-mono text-[10px] uppercase tracking-widest mb-4">Research focus: End-to-end autonomous racing via reinforcement learning.</p>
                   <div className="h-[2px] w-full bg-white/10" />
                 </div>
               </div>
@@ -55,7 +55,7 @@ export default function App() {
                     <Brain className="w-6 h-6" />
                   </div>
                   <h3 className="text-3xl font-bold mb-6 italic tracking-tight">PPO // STABILITY</h3>
-                  <p className="text-white/50 font-light leading-relaxed mb-10">
+                  <p className="text-white/70 font-light leading-relaxed mb-10">
                     Proximal Policy Optimization for continuous control. Our baseline for collision-free trajectory tracking and adaptive braking.
                   </p>
                   <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ export default function App() {
                     <Rocket className="w-6 h-6" />
                   </div>
                   <h3 className="text-3xl font-bold mb-6 italic tracking-tight">DreamerV3 // PREDICTION</h3>
-                  <p className="text-white/50 font-light leading-relaxed mb-10">
+                  <p className="text-white/70 font-light leading-relaxed mb-10">
                     World-model based RL. Drastically reducing real-world samples by training in highly accurate learned latent spaces.
                   </p>
                   <div className="flex items-center gap-4">
@@ -105,7 +105,7 @@ export default function App() {
                 <div className="relative z-10 text-center">
                   <span className="font-mono text-[10px] text-brand-blue font-bold tracking-[0.8em] uppercase mb-12 block">Recruitment_Phase_Active</span>
                   <h2 className="text-5xl md:text-8xl font-black italic tracking-tighter text-white mb-10 leading-none">JOIN THE<br/><span className="text-stroke text-white">COLLECTIVE</span></h2>
-                  <p className="text-white/50 text-xl mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-white/70 text-xl mb-12 font-light max-w-2xl mx-auto leading-relaxed">
                     We're engineers, designers, and dreamers. If you code for speed, you should be one of us. (No previous robotics experience required)
                   </p>
                   

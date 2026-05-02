@@ -57,7 +57,7 @@ export default function Events() {
               <div className="flex items-center gap-10">
                 <div className="flex flex-col items-center justify-center min-w-[100px] py-4 bg-slate-50 rounded-xl group-hover:bg-blue-50 transition-colors">
                   <span className="font-display font-bold text-3xl text-brand-blue leading-none">{event.date.split(',')[0].split(' ')[1]}</span>
-                  <span className="font-mono text-slate-400 text-[10px] uppercase tracking-widest mt-1">{event.date.split(',')[0].split(' ')[0]}</span>
+                  <span className="font-mono text-slate-500 text-[10px] uppercase tracking-widest mt-1">{event.date.split(',')[0].split(' ')[0]}</span>
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -67,10 +67,10 @@ export default function Events() {
                     }`}>
                       {event.status}
                     </span>
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">{event.type}</span>
+                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{event.type}</span>
                   </div>
                   <h3 className="text-2xl font-display font-bold text-brand-ink group-hover:text-brand-blue transition-colors">{event.title}</h3>
-                  <div className="flex items-center gap-4 mt-3 text-slate-400 text-sm">
+                  <div className="flex items-center gap-4 mt-3 text-slate-500 text-sm">
                     <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> {event.location}</span>
                   </div>
                 </div>
@@ -81,6 +81,7 @@ export default function Events() {
                   href={event.link}
                   target="_blank" 
                   rel="noreferrer"
+                  aria-label={`Register for ${event.title}`}
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-brand-ink text-white font-display font-bold text-xs rounded-full group-hover:bg-brand-blue transition-all uppercase tracking-widest cursor-pointer"
                 >
                   Register <ChevronRight className="w-4 h-4" />
