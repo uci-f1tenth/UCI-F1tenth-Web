@@ -52,11 +52,10 @@ export default function Navbar() {
         </div>
         
         <div className="hidden md:flex items-center gap-10 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
-          <a href="#about" className="hover:text-brand-blue transition-colors">Lab_01</a>
-          <a href="#tech" className="hover:text-brand-blue transition-colors">Stack_02</a>
-          <a href="#simulators" className="hover:text-brand-blue transition-colors">Sim_03</a>
-          <a href="#events" className="hover:text-brand-blue transition-colors">Events_04</a>
-          <a href="#join" className="hover:text-brand-blue transition-colors">Join_05</a>
+          <a href="#tech" className="hover:text-brand-blue transition-colors">Stack_01</a>
+          <a href="#simulators" className="hover:text-brand-blue transition-colors">Sim_02</a>
+          <a href="#events" className="hover:text-brand-blue transition-colors">Events_03</a>
+          <a href="#join" className="hover:text-brand-blue transition-colors">Join_04</a>
         </div>
 
         <button onClick={() => window.open('https://github.com/uci-f1tenth', '_blank')} className="px-6 py-2 bg-brand-ink text-white font-display font-bold text-xs rounded-full hover:bg-brand-blue hover:shadow-xl hover:shadow-blue-500/30 transition-all uppercase tracking-widest">
