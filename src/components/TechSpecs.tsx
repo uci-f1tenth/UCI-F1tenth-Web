@@ -81,43 +81,21 @@ export default function TechSpecs() {
           ))}
         </div>
 
-        {/* Physical Platform Showcase Placeholder
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative aspect-[21/9] w-full rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center group"
+          className="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200"
         >
-          <div className="absolute inset-0 technical-grid opacity-20" />
-          
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 to-transparent z-10" />
-          
-          <div className="relative z-20 text-center">
-            <div className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
-               <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1" />
-            </div>
-            <span className="font-mono text-[10px] text-brand-yellow font-bold tracking-[0.5em] uppercase mb-4 block">Physical_Unit_Alpha</span>
-            <h3 className="text-3xl font-black italic text-white tracking-widest uppercase">The Machine_In_Motion</h3>
-          </div>
-
-          <div className="absolute top-8 left-8 z-20 flex gap-4">
-             <div className="flex flex-col">
-                <span className="font-mono text-[8px] text-white/40 uppercase">Chassis</span>
-                <span className="text-white font-bold text-xs">V1.5 CUSTOM</span>
-             </div>
-             <div className="flex flex-col">
-                <span className="font-mono text-[8px] text-white/40 uppercase">Weight</span>
-                <span className="text-white font-bold text-xs">2.4 KG</span>
-             </div>
-          </div>
-
-          <div className="absolute bottom-8 right-8 z-20">
-             <div className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                <span className="font-mono text-[10px] text-white font-medium">LIVE_FEED_READY</span>
-             </div>
-          </div>
-        </motion.div> */}
+          <iframe 
+            className=" absolute inset-0 w-full h-full z-10"
+            src="https://www.youtube.com/embed/jEkM8n8AQvY?rel=0&modestbranding=1&color=white"
+            title="F1TENTH UCI Hardware Showcase"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen
+          />
+        </motion.div>
       </div>
     </section>
   );
