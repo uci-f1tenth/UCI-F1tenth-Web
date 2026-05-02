@@ -5,11 +5,13 @@ import { Box, Ghost, Layers } from 'lucide-react';
 const sims = [
   {
     icon: <Ghost className="w-6 h-6" />,
-    title: "Warptoracer",
+    title: "Warporacer",
     desc: "Our custom high-performance simulator. Optimized for RL training throughput, this is where 90% of our research iterations happen.",
     tag: "CUSTOM_ENGINE",
     status: "PRIMARY",
-    color: "text-brand-blue"
+    color: "text-brand-blue",
+    mediaType: "video",
+    mediaSrc: "/images/warporacer.mp4"
   },
   {
     icon: <Box className="w-6 h-6" />,
@@ -17,7 +19,9 @@ const sims = [
     desc: "The official competition simulator. Used for final validation and cross-bridge telemetry testing before real-world deployment.",
     tag: "STDC_OFFICIAL",
     status: "VALIDATION",
-    color: "text-brand-yellow"
+    color: "text-brand-yellow",
+    mediaType: "video",
+    mediaSrc: "/images/autodrive.mp4"
   },
   {
     icon: <Layers className="w-6 h-6" />,
@@ -25,7 +29,9 @@ const sims = [
     desc: "NVIDIA-powered high-fidelity physics environment. Currently in early integration for multi-agent interaction research.",
     tag: "NVIDIA_PHYSICS",
     status: "BETA",
-    color: "text-brand-cyan"
+    color: "text-brand-cyan",
+    mediaType: "image",
+    mediaSrc: "/images/Car_Side.png"
   }
 ];
 
@@ -48,14 +54,34 @@ export default function Simulators() {
             className="group"
           >
             <div className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-brand-blue/5 hover:-translate-y-1">
+              
               {/* Image / Scene Space */}
-              <div className="aspect-video bg-slate-50 relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 opacity-40 technical-grid-light" />
-                <div className={`transition-transform duration-700 ${sim.color}`}>
-                   {sim.icon}
-                </div>
+              <div className="aspect-square bg-slate-50 relative overflow-hidden flex items-center justify-center">
+                {/* The Grid Overlay */}
+                <div className="absolute inset-0 opacity-40 technical-grid-light z-10 pointer-events-none" />
+                
+                {/* Dynamic Media Rendering */}
+                {sim.mediaType === 'video' ? (
+                  <video 
+                    autoPlay 
+                    aria-hidden="true"
+                    loop 
+                    muted 
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+                  >
+                    <source src={sim.mediaSrc} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img 
+                    src={sim.mediaSrc} 
+                    alt={`Media of ${sim.title} simulator`}
+                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+                  />
+                )}
 
-                <div className="absolute bottom-4 left-4">
+                {/* Sensor Tag */}
+                <div className="absolute bottom-4 left-4 z-20">
                   <span className="font-mono text-[8px] px-2 py-1 bg-white/80 backdrop-blur border border-slate-200 rounded uppercase font-bold text-slate-500">
                     SENS_ARRAY_{idx + 1}
                   </span>

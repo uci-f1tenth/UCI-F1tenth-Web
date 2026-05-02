@@ -1,6 +1,6 @@
 import React from 'react';
 import { Zap, Github, Twitter, Youtube, Instagram, MessageSquare } from 'lucide-react';
-import logo from '../images/F1TenthUCIlogo.png';
+import logo from "/apple-touch-icon.png";
 
 
 export default function Footer() {

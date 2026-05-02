@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
-import heroImage from '../images/IMG_3700.jpg';
+import heroImage from '/images/IMG_3700.jpg';
 
 export default function Hero() {
   return (
     <section id="hero" className="relative pt-40 pb-24 overflow-hidden technical-grid-light min-h-[90vh] flex items-center bg-white">
-      {/* Persona Sweeps */}
+      <link rel="preload" as="image" href={heroImage} />
       <motion.div 
         initial={{ x: "-150%", skewX: -20 }}
         animate={{ x: "400%", skewX: -20 }}
@@ -64,6 +64,7 @@ export default function Hero() {
                 <img 
                   src={heroImage} 
                   alt="Autonomous Hardware" 
+                  fetchPriority="high"
                   className="w-full h-full object-cover brightness-100"
                   referrerPolicy="no-referrer"
                 />

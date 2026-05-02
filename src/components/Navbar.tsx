@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
 import { Cpu, Zap, Car } from 'lucide-react';
-import logo from '../images/F1TenthUCIlogo.png';
+import logo from '/apple-touch-icon.png';
 
 export default function Navbar() {
   // Key update in Navbar.tsx for "Flowing" progress
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 45, // Much softer stiffness for "weighty" flow
+    stiffness: 100, // Much softer stiffness for "weighty" flow
     damping: 25,   // Higher damping to avoid jittery bounces
     restDelta: 0.001
   });
@@ -21,7 +21,7 @@ export default function Navbar() {
           className="absolute top-0 h-full bg-brand-blue shadow-[0_0_10px_rgba(0,163,255,0.4)]"
           style={{ width: carX }}
         >
-          <div className="absolute right-0 top-0 h-full flex items-center">
+          <div className="absolute right-0 top-3 h-full flex items-center">
              {/* The Car pinned ON TOP of the track */}
              <motion.div 
                className="relative -translate-y-[10px]"
@@ -34,9 +34,9 @@ export default function Navbar() {
                  ease: "easeInOut"
                }}
              >
-                <Car className="w-5 h-5 text-brand-blue fill-brand-blue drop-shadow-[0_0_15px_rgba(0,163,255,1)]" />
+                <img src="/images/car_sihlouette.png" alt="Car" className="w-8 h-3 text-brand-blue fill-brand-blue drop-shadow-[0_0_15px_rgba(0,163,255,0.5)]" />
                 {/* Exhaust/Motion Trail */}
-                <div className="absolute right-full mr-2 h-1 w-20 bg-gradient-to-l from-brand-blue to-transparent opacity-40 blur-[2px]" />
+                <div className="absolute right-full h-1 w-20 bg-gradient-to-l from-brand-blue to-transparent opacity-40 blur-[2px]" />
              </motion.div>
           </div>
         </motion.div>
@@ -44,9 +44,9 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src={logo} className="w-12 h-12" />
+          <img src={logo} alt="F1TENTH@UCI Logo" className="w-12 h-12" />
           <div>
-            <h1 className="text-xl font-display font-bold tracking-tight leading-none">F1TENTH</h1>
+            <div className="text-xl font-display font-bold tracking-tight leading-none">F1TENTH</div>
             <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-400">Autonomous Racing</span>
           </div>
         </div>
